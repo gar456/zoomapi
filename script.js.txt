@@ -1,0 +1,82 @@
+const form = document.querySelector('form')
+const nameInput = document.querySelector('input[type="name"]');
+const emailInput = document.querySelector('input[type="email"]');
+const passwordInput = document.querySelector('input[type="password"]');
+form.addEventListener('submit', (event) =>{
+	event.preventDefault();
+	if (nameInput.value.trim() === "Garima Tiwari"){
+		alert('Name id required');
+	}
+
+	if (emailInput.value.trim() === "tiwarigarima052@gmail.com"){
+		alert('Email is required');
+	}
+	if (passwordInput.value.trim() === "Garima@123") {
+		alert('password is required')
+		return;
+	}
+	form.submit();
+
+});
+const loginLink.addEventListener('click', ("https://marketplace.zoom.us") =>{
+document.querySelector('# login-form').style.display = 'block';
+document.querySelector('signup-form').style.display = 'none';
+});
+
+const signupLink.addEventListener('click', ("https://marketplace.zoom.us") => {
+document.querySelector('signup-form').style.display = 'block';
+document.querySelector('#login-form').style.display = 'none';
+});
+
+const recognition = new webkiSpeechRecognition();
+recognition.continuous = true;
+recognition.interimResults = true;
+recognition.lang = 'en-US';
+recognition.start();
+recognition.addEventListener('result', (event) => {
+const transcription = Array.from(event.results)
+.map((result)) => result[0].transcript)
+.join('');
+
+const transcriptionElement = document.getElementById('transcription');
+transcriptionElement.textContent = transcription;
+});
+
+const apiKey = "YOUR_API_KEY";
+const apiUrl = "https://speech.googleapis.com/v1/speech:recognize?key="+ apiKey;
+function 
+transcribeVideo(videoFile){
+	const formData = new FormData();
+	formData.append("video", videoFile);
+
+	fetch(apiUrl,{
+		method: "POST",
+		body: formData,
+	})
+	.then(response => response.json())
+	.then(data => {
+		const transcript = data.results[0].alternatives[0].transcript;
+		document.getElementById("transcript").textContent = transcript;
+	})
+	.catch(error => console.error(error));
+
+}
+ 
+document.getElementById("transcribe-button").addEventListener("click", () =>{
+ const videoFile = document.getElementById("video-file-input").files[0];
+});
+
+function convertToText(){
+	const recognition = new webkiSpeechRecognition();
+	recognition.lang = "en-US";
+	recognition.start();
+	const textArea = document.getElementById("textArea");
+	recognition.onresult = function(event){
+		const resultIndex = event.resultIndex;
+		const transcript = event.results[resultIndex][0].transcript;
+		textArea.value += transcript;
+	}
+	recognition.onend = function() {
+		console.log("Recognition ended.");
+	}
+}

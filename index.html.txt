@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Zoom Recording Tool</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="script.js">
+
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Recordings</a></li>
+				<li><a href="#">Transcriptions</a></li>
+				<li><a href="#">Account</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Zoom Recording Tool</h1>
+		<p>Welcome to the Zoom Recording Tool. Here you can record, view, and manage your Zoom recording and transcriptions.</p>
+		<form>
+			<fieldset>
+				<legend>Record a Zoom Call
+				</legend>
+				<label for="meeting-id">Meeting ID:</label>
+				<input type="text" name="meeting-id" id="meeting-id" placeholder="Enter your Meeting ID" required>
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" placeholder="Enter your Meeting password" required>
+				
+			</fieldset>
+		</form>
+		<p>Don't have an account?<a href="SignUp.html">SignUp here</a></p>
+		<p>Already have an account?<a href="Login.html">Login Here:</a></p>
+		<p>go to convert video to english text<a href="videoconvert.html">Convert Here:</a></p>
+	</main>
+	<footer>
+		<p>&copy; 2023 Zoom Recording Tool. All rights reserved.</p>
+	</footer>
+</body>
+</html>

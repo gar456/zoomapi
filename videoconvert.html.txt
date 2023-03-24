@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="script.js">
+	<title>Video Converter Into Text</title>	
+</head>
+<body>
+ <header>
+ 	<h1>Welcome Video Convert Into Text </h1>
+ </header>
+ <nav>
+ 	<ul>
+ 		<li><a href="#">Recording</a></li>
+ 		<li><a href="#">Transcription</a></li>
+ 		<li><a href="#">Account</a></li>
+ 	</ul>
+ </nav>
+ <main>
+ 	<section>
+ 		<video id="myvideo" width="640" height="480" controls>
+ 			<source src="video1832083695.mp4" type="video/mp4">
+ 		</video>
+ 		<button id="transcribe-button" onclick="ConvertToText()">Convert to English Text</button>
+ 		<textarea id="textArea" readonly></textarea>
+ 	</section>
+ 	<p>go to main page<a href="index.html">Main page</a></p>
+ </main>
+ <footer>
+ 	<p>&copy; 2023 Zoom Recording Tool</p>
+ </footer>
+</body>
+</html>
